@@ -11,3 +11,13 @@ This pattern is useful when we need to collect the values or frequencies of the 
 - examples
   - 01-sameSquareArray.js
   - 02-validAnagram.js
+
+
+## Multiple Pointer Pattern
+
+This pattern is useful when we need to traverse an array towards beginning, end or middle on a certain condition
+
+- It can be applied when array is sorted _(not necessarily)_
+- example
+  - 03-sumZero.js
+  - 04-countUniqueValues.js

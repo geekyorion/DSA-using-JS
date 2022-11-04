@@ -18,6 +18,16 @@ This pattern is useful when we need to collect the values or frequencies of the 
 This pattern is useful when we need to traverse an array towards beginning, end or middle on a certain condition
 
 - It can be applied when array is sorted _(not necessarily)_
-- example
+- examples
   - 03-sumZero.js
   - 04-countUniqueValues.js
+
+
+## Sliding Window
+
+This pattern is useful when we need to perform certain actions on a range (window) of an array/iterator.
+As per the action this window can be reduced or closed or shifted.
+
+- very useful in a case where subsets are involved
+- example
+  - 05-maxSum.js

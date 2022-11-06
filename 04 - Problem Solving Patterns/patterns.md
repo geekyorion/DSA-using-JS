@@ -31,3 +31,12 @@ As per the action this window can be reduced or closed or shifted.
 - very useful in a case where subsets are involved
 - example
   - 05-maxSum.js
+
+
+## Divide and Conquer
+
+Divide the data in smaller chunk and keeps on dividing until the unit subset is solvable and the merge it back to get the answer
+
+- it tremendously __decrease the time complexity__
+- example:
+  - 06-binarySearch.js

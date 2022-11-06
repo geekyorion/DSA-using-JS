@@ -32,9 +32,9 @@
 
 ## types of complexity
 - __time complexity__: it deals with the time
-  - example: [01-compare-function.js](./exmaples.html#01-compare-functionsjs)
+  - example: [01-compare-function.js](./examples/examples.html#01-compare-functionsjs)
 - __space complexity__: it deals with the space (memory)
-  - example: [02-space-complexity.js](./exmaples.html#02-space-complexityjs)
+  - example: [02-space-complexity.js](./examples/examples.html#02-space-complexityjs)
 - __auxiliary space complexity__: space required by the algorithm excluding input memory
 - __space required by__:
     - the primitives like boolean, number, etc are constants
@@ -48,6 +48,6 @@
 
 ---
 
-### All section (examples) codes and challenges
-- examples_code: [click here](./examples.html)
+### All section examples code and challenges code
+- examples: [click here](./examples/examples.html)
 - challenges: NA

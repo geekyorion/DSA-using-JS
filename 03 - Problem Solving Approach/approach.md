@@ -33,5 +33,13 @@ To solve the algorithm in a very efficient way, we need __Data Structures__.
       - try to optimize the code
       - proper comments
       - make it readable
+    - example
+      - [01-count-chars.js](./examples/examples.html#01-count-charsjs)
 
 __Book__: _How to solve it by **George Polya**_
+
+---
+
+### All section examples code and challenges code
+- examples: [click here](./examples/examples.html)
+- challenges: NA

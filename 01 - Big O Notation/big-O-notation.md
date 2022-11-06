@@ -5,9 +5,7 @@
         - the code should be efficient
         - it should take less
             - time (higher priority)
-              - example: [01-compare-function.js](./exmaples.html#01-compare-functionsjs)
             - memory (lower priority)
-              - example: [02-space-complexity.js](./exmaples.html#02-space-complexityjs)
     - help us to identify the pin point of the overall application
 - basically count the operations as we can not rely on the time as every machine is different
 - it is the way to formalize fuzzy counting
@@ -34,7 +32,9 @@
 
 ## types of complexity
 - __time complexity__: it deals with the time
+  - example: [01-compare-function.js](./exmaples.html#01-compare-functionsjs)
 - __space complexity__: it deals with the space (memory)
+  - example: [02-space-complexity.js](./exmaples.html#02-space-complexityjs)
 - __auxiliary space complexity__: space required by the algorithm excluding input memory
 - __space required by__:
     - the primitives like boolean, number, etc are constants

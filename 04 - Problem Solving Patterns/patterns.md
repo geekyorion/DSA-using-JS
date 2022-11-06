@@ -9,8 +9,8 @@ This pattern is useful when we need to collect the values or frequencies of the 
 - It can help us to avoid O(n<sup>2</sup>)
 - It is used when we want to search or iterate through an array (iterator) and it depends on an another array so to avoid nested loops, it can be used
 - examples
-  - [01-sameSquareArray.js](./examples/examples.html#01-sameSquareArrayjs)
-  - [02-validAnagram.js](./examples/examples.html#02-validAnagramjs)
+  - [01-sameSquareArray.js](./examples/examples.html#01-samesquarearrayjs)
+  - [02-validAnagram.js](./examples/examples.html#02-validanagramjs)
 
 
 ## Multiple Pointer Pattern
@@ -19,8 +19,8 @@ This pattern is useful when we need to traverse an array towards beginning, end 
 
 - It can be applied when array is sorted _(not necessarily)_
 - examples
-  - [03-sumZero.js](./examples/exmaples.html#03-sumZerojs)
-  - [04-countUniqueValues.js](./examples/examples.html#04-countUniqueValuesjs)
+  - [03-sumZero.js](./examples/exmaples.html#03-sumzerojs)
+  - [04-countUniqueValues.js](./examples/examples.html#04-countuniquevaluesjs)
 
 
 ## Sliding Window
@@ -30,7 +30,7 @@ As per the action this window can be reduced or closed or shifted.
 
 - very useful in a case where subsets are involved
 - example
-  - [05-maxSum.js](./examples/examples.html#05-maxSumjs)
+  - [05-maxSum.js](./examples/examples.html#05-maxsumjs)
 
 
 ## Divide and Conquer
@@ -39,7 +39,7 @@ Divide the data in smaller chunk and keeps on dividing until the unit subset is 
 
 - it tremendously __decrease the time complexity__
 - example:
-  - [06-binarySearch.js](./examples/examples.html#06-binarySearchjs)
+  - [06-binarySearch.js](./examples/examples.html#06-binarysearchjs)
 
 ---
 

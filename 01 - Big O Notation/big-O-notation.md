@@ -43,3 +43,9 @@
 - log<sub>base</sub>(value) = exponent <===> base<sup>exponent</sup> = value
     - example: log<sub>2</sub>8 = 3 <===> 2<sup>3</sup> = 8
 - we often see _log_ while working with complexity
+
+---
+
+### All section (examples) codes and challenges
+- examples_code: [click here](./examples.html)
+- challenges: NA

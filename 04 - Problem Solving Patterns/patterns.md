@@ -19,7 +19,7 @@ This pattern is useful when we need to traverse an array towards beginning, end 
 
 - It can be applied when array is sorted _(not necessarily)_
 - examples
-  - [03-sumZero.js](./examples/exmaples.html#03-sumzerojs)
+  - [03-sumZero.js](./examples/examples.html#03-sumzerojs)
   - [04-countUniqueValues.js](./examples/examples.html#04-countuniquevaluesjs)
 
 

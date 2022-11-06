@@ -32,7 +32,7 @@
 
 ## types of complexity
 - __time complexity__: it deals with the time
-  - example: [01-compare-function.js](./examples/examples.html#01-compare-functionsjs)
+  - example: [01-compare-functions.js](./examples/examples.html#01-compare-functionsjs)
 - __space complexity__: it deals with the space (memory)
   - example: [02-space-complexity.js](./examples/examples.html#02-space-complexityjs)
 - __auxiliary space complexity__: space required by the algorithm excluding input memory

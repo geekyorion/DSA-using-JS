@@ -1,6 +1,6 @@
 # Big O section examples:
 
-### 01-compare-function.js
+### 01-compare-functions.js
 
 ```js
 // Write a function to get the sum upto N numbers

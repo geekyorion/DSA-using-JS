@@ -5,7 +5,9 @@
         - the code should be efficient
         - it should take less
             - time (higher priority)
+              - example: [01-compare-function.js](./exmaples.html#01-compare-functionsjs)
             - memory (lower priority)
+              - example: [02-space-complexity.js](./exmaples.html#02-space-complexityjs)
     - help us to identify the pin point of the overall application
 - basically count the operations as we can not rely on the time as every machine is different
 - it is the way to formalize fuzzy counting

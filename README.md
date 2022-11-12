@@ -16,4 +16,4 @@ Every section has it's own markdown file to read where the notes are present.
 |[02 - Performance of Array & Object](./02%20-%20Performance%20of%20Array%20and%20Object/performance.html)|NA|NA|
 |[03 - Problem solving approach](./03%20-%20Problem%20Solving%20Approach/approach.html)|[examples](./03%20-%20Problem%20Solving%20Approach/examples/examples.html)|NA|
 |[04 - Problem solving patterns](./04%20-%20Problem%20Solving%20Patterns/patterns.html)|[examples](./04%20-%20Problem%20Solving%20Patterns/examples/examples.html)|[challenges](./04%20-%20Problem%20Solving%20Patterns/challenges/challenges.html)|
-|[05 - Recursion](./05%20-%20Recursion/recursion.html)|[examples](./05%20-%20Recursion/examples/examples.html)|NA|
+|[05 - Recursion](./05%20-%20Recursion/recursion.html)|[examples](./05%20-%20Recursion/examples/examples.html)|[challenges](./05%20-%20Recursion/challenges/challenges.html)|

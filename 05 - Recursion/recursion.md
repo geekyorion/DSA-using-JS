@@ -32,4 +32,42 @@ It is an alternative approach of iterative way in which function calls itself ag
 - Base case to exit from recursion
 - Different scope input for the called recursive function
 - example:
-  - [01-countDown.js](./examples/examples.html#01-countdownjs)
+  - simple countdown example where we hit the base case and exit the recursion
+    - [01-countDown.js](./examples/examples.html#01-countdownjs)
+  - Sometimes we want to use the return value from the base case to get the answer
+    - [02-sumRange.js]('./../examples/examples.html#02-sumrangejs)
+  - we can use recursion as an alternative of the iterative approach
+    - [03-factorial.js](./examples/examples.html#03-factorialjs)
+
+## Recursion pitfalls
+
+- no base case can cause `RangeError: Maximum call stack size exceeded`
+- forget to return or return the wrong thing
+  - example: if we return 0 in [factorial program](./examples/examples.html#03-factorialjs)
+    then it will always return 0 as an answer
+- stack overflow i.e. `RangeError: Maximum call stack size exceeded` caused by
+  - no base case
+  - instead of returning we put console
+  - wrong base case
+
+## Helper recursive function
+
+- we can write a function which internally uses a recursive function to get the result
+- an internal function can consume the outer level scoped variables to generate the output
+- format:
+  - [04-helperFunction.js](./examples/examples.html#04-helperfunctionjs)
+- example:
+  - [05-collectOddsHelper.js](./examples/examples.html#05-collectoddshelperjs)
+
+## pure recursive function
+
+- instead of using helper function, we can write the whole logic in a pure recursive way
+- it may become complex
+- example:
+  - [06-collectOddsPureRecursion.js](./examples/examples.html#06-collectoddspurerecursionjs)
+
+---
+
+### All section examples code and challenges code
+- examples: [click here](./examples/examples.html)
+- challenges: [click here](./challenges/challenges.html)

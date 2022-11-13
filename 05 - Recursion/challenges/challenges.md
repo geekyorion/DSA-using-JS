@@ -16,6 +16,32 @@
 - [06-fibWithObject.js](#06-fibwithobjectjs):
   [*High performant*] -
   Write a recursive function called fib which accepts a number and returns the nth number in the Fibonacci sequence
+- [07-reverse.js](#07-reversejs):
+  Write a recursive function called reverse which accepts a string and returns a new string in reverse
+- [08-isPalindrome.js](#08-ispalindromejs):
+  Write a recursive function called isPalindrome which returns true if the string passed to it is a palindrome;
+  Otherwise it returns false
+- [09-someRecursive.js](#09-somerecursivejs):
+  Write a recursive function called someRecursive which accepts an array and a callback.
+  The function returns true if a single value in the array returns true when passed to the callback.
+  Otherwise it returns false
+- [10-flatten.js](#10-flattenjs):
+  Write a recursive function called flatten which accepts an array of arrays and returns a new array with all values flattened.
+- [11-capitalizeFirst.js](#11-capitalizefirstjs):
+  Write a recursive function called capitalizeFirst. Given an array of strings, capitalize the first letter of each string in the array
+- [12-nestedEvenSum.js](#12-nestedevensumjs):
+  Write a recursive function called nestedEvenSum.
+  Return the sum of all even numbers in an object which may contain nested objects.
+- [13-capitalizeWords.js](#13-capitalizewordsjs):
+  Write a recursive function called capitalizeWords.
+  Given an array of words, return a new array containing each word capitalized
+- [14-stringifyNumbers.js](#14-stringifynumbersjs):
+  Write a function called stringifyNumbers which takes in an object and
+  finds all of the values which are numbers and converts them to strings.
+  It should not modify the current object
+- [15-collectStrings.js](#15-collectstringsjs):
+  Write a function called collectStrings which accepts an object and
+  returns an array of all the values in the object that have a typeof string
 
 ---
 
@@ -131,4 +157,257 @@ fib(4);     // 3
 fib(10);    // 55
 fib(28);    // 317811
 fib(35);    // 9227465
+```
+
+### 07-reverse.js
+
+```js
+// Write a recursive function called reverse which accepts a string and returns a new string in reverse.
+
+const reverse = str => {
+    if (!str.length) return '';
+    return reverse(str.substring(1)) + str.substring(0, 1);
+};
+  
+reverse('awesome');     // 'emosewa'
+reverse('rithmschool'); // 'loohcsmhtir'
+```
+
+### 08-isPalindrome.js
+
+```js
+// Write a recursive function called isPalindrome which returns true if the string passed to it is a palindrome
+// (reads the same forward and backward). Otherwise it returns false.
+
+const isPalindrome = str => {
+    const currentLength = str.length;
+    if (str[0] !== str[currentLength - 1]) return false;
+    return true && isPalindrome(str.substring(1, currentLength - 1));
+}
+
+isPalindrome('awesome');    // false
+isPalindrome('foobar');     // false
+isPalindrome('tacocat');    // true
+isPalindrome('amanaplanacanalpanama');      // true
+isPalindrome('amanaplanacanalpandemonium'); // false
+```
+
+### 09-someRecursive.js
+
+```js
+// Write a recursive function called someRecursive which accepts an array and a callback.
+// The function returns true if a single value in the array returns true when passed to the callback.
+// Otherwise it returns false.
+
+// example callback
+const isOdd = val => val % 2 !== 0;
+
+const someRecursive = (arr, cb) => {
+    if (!arr.length) return false;
+    return cb(arr[0]) || someRecursive(arr.slice(1), cb);
+};
+
+someRecursive([1, 2, 3, 4], isOdd);         // true
+someRecursive([4, 6, 8, 9], isOdd);         // true
+someRecursive([4, 6, 8], isOdd);            // false
+someRecursive([4, 6, 8], val => val > 10);  // false
+```
+
+### 10-flatten.js
+
+```js
+// Write a recursive function called flatten which accepts an array of arrays and returns a new array with all values flattened.
+
+const flatten = arr => {
+    if (!arr.length) return [];
+    const newArr = [];
+    if (Array.isArray(arr[0])) {
+        newArr.push(...flatten(arr[0]));
+    } else {
+        newArr.push(arr[0]);
+    }
+    return [...newArr, ...flatten(arr.slice(1))];
+};
+
+flatten([1, 2, 3, [4, 5]]);         // [1, 2, 3, 4, 5]
+flatten([1, [2, [3, 4], [[5]]]]);   // [1, 2, 3, 4, 5]
+flatten([[1],[2],[3]]);             // [1, 2, 3]
+flatten([[[[1], [[[2]]], [[[[[[[3]]]]]]]]]]);   // [1, 2, 3]
+```
+
+### 11-capitalizeFirst.js
+
+```js
+// Write a recursive function called capitalizeFirst. Given an array of strings,
+// capitalize the first letter of each string in the array
+
+const capitalizeFirst = arr => {
+    if (!arr.length) return [];
+    const currStr = arr[0];
+    return [
+        currStr[0].toUpperCase() + currStr.substring(1),
+        ...capitalizeFirst(arr.slice(1))
+    ];
+};
+
+capitalizeFirst(['car', 'taco', 'banana']); // ['Car', 'Taco', 'Banana']
+```
+
+### 12-nestedEvenSum.js
+
+```js
+// Write a recursive function called nestedEvenSum.
+// Return the sum of all even numbers in an object which may contain nested objects.
+
+const nestedEvenSum = obj => {
+    let sum = 0;
+    for (let key in obj) {
+        const currentValue = obj[key];
+        if (typeof currentValue === 'object') {
+            sum += nestedEvenSum(currentValue);
+        } else {
+            if (!isNaN(currentValue) && currentValue % 2 === 0) {
+                sum += currentValue;
+            }
+        }
+    }
+    return sum;
+};
+
+const obj1 = {
+    outer: 2,
+    obj: {
+        inner: 2,
+        otherObj: {
+            superInner: 2,
+            notANumber: true,
+            alsoNotANumber: "yup"
+        }
+    }
+}
+
+const obj2 = {
+    a: 2,
+    b: { b: 2, bb: { b: 3, bb: { b: 2 } } },
+    c: { c: { c: 2 }, cc: 'ball', ccc: 5 },
+    d: 1,
+    e: { e: { e: 2 }, ee: 'car' }
+};
+
+nestedEvenSum(obj1);  // 6
+nestedEvenSum(obj2);  // 10
+```
+
+### 13-capitalizeWords.js
+
+```js
+// Write a recursive function called capitalizeWords.
+// Given an array of words, return a new array containing each word capitalized.
+
+const capitalizeWords = arr => {
+    if (!arr.length) return [];
+    return [arr[0].toUpperCase(), ...capitalizeWords(arr.slice(1))];
+};
+
+const words = ['i', 'am', 'learning', 'recursion'];
+capitalizeWords(words); // ['I', 'AM', 'LEARNING', 'RECURSION']
+```
+
+### 14-stringifyNumbers.js
+
+```js
+// Write a function called stringifyNumbers which takes in an object and
+// finds all of the values which are numbers and converts them to strings.
+// It should not modify the current object.
+
+const stringifyNumbers = obj => {
+    const newObj = Array.isArray(obj) ? [] : {};
+    for (let key in obj) {
+        const currentValue = obj[key];
+        if (typeof currentValue === 'object') {
+            newObj[key] = stringifyNumbers(currentValue);
+        } else {
+            if (typeof currentValue === 'number') {
+                newObj[key] = currentValue.toString();
+            } else {
+                newObj[key] = currentValue;
+            }
+        }
+    }
+    return newObj;
+};
+
+const obj = {
+    num: 1,
+    test: [{
+        name: 'geekyorion',
+        roll: 12
+    }],
+    data: {
+        val: 4,
+        info: {
+            isRight: true,
+            random: 66
+        }
+    }
+};
+
+stringifyNumbers(obj);
+
+/*
+output: {
+    num: '1',
+    test: [{
+        name: 'geekyorion',
+        roll: '12'
+    }],
+    data: {
+        val: '4',
+        info: {
+            isRight: true,
+            random: '66'
+        }
+    }
+}
+*/
+```
+
+### 15-collectStrings.js
+
+```js
+// Write a function called collectStrings which accepts an object
+// and returns an array of all the values in the object that have a typeof string
+
+const collectStrings = obj => {
+    const strings = [];
+    for (let key in obj) {
+        const currentValue = obj[key];
+        if (typeof currentValue === 'object') {
+            strings.push(...collectStrings(currentValue));
+        } else {
+            if (typeof currentValue === 'string') {
+                strings.push(currentValue);
+            }
+        }
+    }
+    return strings;
+};
+
+const obj = {
+    stuff: "foo",
+    data: {
+        val: {
+            thing: {
+                info: "bar",
+                moreInfo: {
+                    evenMoreInfo: {
+                        weMadeIt: "baz"
+                    }
+                }
+            }
+        }
+    }
+};
+
+collectStrings(obj);    // ["foo", "bar", "baz"]
 ```

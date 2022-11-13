@@ -1,5 +1,21 @@
 # Recursion examples
 
+- [01-countDown.js](#01-countdownjs):
+  Write a function to print the countdown using recursion approach
+- [02-sumRange.js](#02-sumrangejs):
+  Write a function sumRange which accept a positive integer
+  and returns the sum from 1 to given number
+- [03-factorial.js](#03-factorialjs):
+  Write a recursive function to calculate factorial or a positive integer
+- [04-helperFunction.js](#04-helperfunctionjs):
+  this program is **just a format** for helper function and **contains errors**
+- [05-collectOddsHelper.js](#05-collectoddshelperjs):
+  write a function to collect odds number from an array using recursion helper function
+- [06-collectOddsPureRecursion.js](#06-collectoddspurerecursionjs):
+  write a function to collect odds number from an array using pure recursion
+
+---
+
 ### 01-countDown.js
 
 ```js

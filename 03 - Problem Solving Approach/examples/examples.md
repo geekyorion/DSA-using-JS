@@ -1,5 +1,10 @@
 # Problem solving approach examples:
 
+- [01-count-chars.js](#01-count-charsjs):
+  Write a function to get the character counts
+
+---
+
 ### 01-count-chars.js
 
 ```js

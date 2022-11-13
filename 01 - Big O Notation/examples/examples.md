@@ -1,5 +1,12 @@
 # Big O section examples:
 
+- [01-compare-functions.js](#01-compare-functionsjs):
+  Write a function to get the sum up to N numbers
+- [02-space-complexity.js](#02-space-complexityjs):
+  Write a function to calculate the sum of the array numbers
+
+---
+
 ### 01-compare-functions.js
 
 ```js

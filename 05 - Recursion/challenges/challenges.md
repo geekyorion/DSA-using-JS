@@ -1,5 +1,24 @@
 # Recursion challenges
 
+- [01-power.js](#01-powerjs):
+  Write a function called power which accepts a base and an exponent.
+  The function should return the power of the base to the exponent
+- [02-factorial.js](#02-factorialjs):
+  Write a function factorial which accepts a number and returns the factorial of that number
+- [03-productOfArray.js](#03-productofarrayjs):
+  Write a function called productOfArray which takes in an array of numbers and returns the product of them all
+- [04-recursiveRange.js](#04-recursiverangejs):
+  Write a function called recursiveRange which accepts a number
+  and adds up all the numbers from 0 to the number passed to the function
+- [05-fibPureRecursive.js](#05-fibpurerecursivejs):
+  [*Less performant*] -
+  Write a recursive function called fib which accepts a number and returns the nth number in the Fibonacci sequence
+- [06-fibWithObject.js](#06-fibwithobjectjs):
+  [*High performant*] -
+  Write a recursive function called fib which accepts a number and returns the nth number in the Fibonacci sequence
+
+---
+
 ### 01-power.js
 
 ```js
@@ -20,6 +39,10 @@ power(2, 4);    // 16
 ### 02-factorial.js
 
 ```js
+// Write a function factorial which accepts a number and returns the factorial of that number.
+// A factorial is the product of an integer and all the integers below it;
+// e.g., factorial four ( 4! ) is equal to 24, because 4 * 3 * 2 * 1 equals 24.  factorial zero (0!) is always 1.
+
 const factorial = num => {
     if (num <= 1) return 1;
     return num * factorial(num - 1);

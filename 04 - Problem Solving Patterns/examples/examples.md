@@ -1,5 +1,20 @@
 # Problem solving patterns examples:
 
+- [01-sameSquareArray.js](#01-samesquarearrayjs):
+  write a function to check whether both of the arrays are same or not
+- [02-validAnagram.js](#02-validanagramjs):
+  write a function to check whether two words are anagrams or not
+- [03-sumZero.js](#03-sumzerojs):
+  Write a function to get a pair whose sum is zero
+- [04-countUniqueValues.js](#04-countuniquevaluesjs):
+  Write a program to count all the unique numbers that are present in a sorted array
+- [05-maxSum.js](#05-maxsumjs):
+  write a function to return the max subarray sum of specified length
+- [06-binarySearch.js](#06-binarysearchjs):
+  write a function to return the index of the given number in the sorted array if exist otherwise -1
+
+---
+
 ### 01-sameSquareArray.js
 
 ```js
